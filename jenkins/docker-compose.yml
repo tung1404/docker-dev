@@ -1,0 +1,11 @@
+version: '2'
+services:
+  jenkins_master:
+    # image: jenkins:2.7.4
+    build: .
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      - ./log:/var/log/jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
