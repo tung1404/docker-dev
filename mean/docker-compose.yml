@@ -13,4 +13,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./data:/data
+      - mean_mongo_data:/data
+volumes:
+  mean_mongo_data:
+    driver: local
