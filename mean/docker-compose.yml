@@ -12,8 +12,5 @@ services:
     image: mongo
     ports:
       - 27017:27017
-    volumes:
-      - mean_mongo_data:/data
-volumes:
-  mean_mongo_data:
-    driver: local
+    volumes:  
+      - ./data:/data
