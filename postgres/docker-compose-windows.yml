@@ -1,0 +1,15 @@
+version: '2'
+services:
+    db:
+        build: .
+        environment:
+            - POSTGRES_USER=postgres
+            - PGPASSWORD=postgres 
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - "15432:5432"  
+        volumes:
+            - postgres:/var/lib/postgresql
+volumes:
+    postgres:
+        external: true

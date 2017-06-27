@@ -1,0 +1,13 @@
+version: '2'
+services:
+    db:
+        build: .
+        environment:
+            - POSTGRES_USER=postgres
+            - PGPASSWORD=postgres 
+            - POSTGRES_PASSWORD=postgres
+            - PGDATA=/pgdata
+        ports:
+            - "15432:5432"  
+        volumes:
+            - ./pgdata:/pgdata
